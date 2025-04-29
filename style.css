@@ -1,0 +1,182 @@
+/* Starry background */
+body {
+  margin: 0;
+  font-family: 'Georgia', serif;
+  background: linear-gradient(180deg, #0b0c2a, #1a0a33);
+  color: #fff;
+  overflow-x: hidden;
+  position: relative;
+}
+
+/* Header */
+h1 {
+  text-align: center;
+  font-size: 48px;
+  color: #f7cfff;
+  text-shadow: 0 0 15px #fff5fa, 0 0 25px #c370e0;
+  margin-top: 30px;
+  z-index: 1;
+  position: relative;
+}
+
+h2 {
+  text-align: center;
+  font-size: 28px;
+  color: #f7cfff;
+  text-shadow: 0 0 10px #fff;
+  margin-top: 40px;
+}
+
+p {
+  text-align: center;
+  color: #c9eaff;
+  font-size: 20px;
+  font-weight: 500;
+  margin-top: 10px;
+  text-shadow: 0 0 8px #222;
+}
+
+/* Main Container */
+.main-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content:space-evenly;
+  gap: 10px;
+  margin: 50px;
+}
+
+/* Form */
+form {
+  background: rgba(255, 255, 255, 0.1);
+  border: 2px solid #c370e0;
+  box-shadow: 0 0 20px #c370e0aa, 0 0 40px #8c52ff88;
+  padding: 25px;
+  border-radius: 20px;
+  width: 100%;
+  max-width: 450px;
+}
+
+input, button {
+  width: 90%;
+  padding: 12px;
+  margin: 20px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  background-color: #ffffffee;
+  color: #333;
+}
+
+input:focus {
+  box-shadow: 0 0 20px #c370e0aa, 0 0 40px #8c52ff88;
+  background-color: rgb(38, 3, 62);
+  color: #f7cfff;
+}
+
+.button {
+  background: linear-gradient(to right, #c370e0, #8c52ff);
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: bold;
+}
+
+.button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px #c370e0;
+}
+
+/* Table */
+#student-records {
+  max-width: 800px;
+  width: 100%;
+}
+
+.scrollable-table {
+  max-height: 300px;
+  overflow-y: auto;
+  border-radius: 12px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(8px);
+  border-radius: 12px;
+  overflow: hidden;
+  color: white;
+}
+
+th, td {
+  padding: 15px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  text-align: left;
+}
+
+th {
+  background-color: rgba(131, 58, 180, 0.6);
+  color: white;
+  font-weight: 600;
+  text-shadow: 0 0 6px #000;
+}
+
+td {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+table tr:hover td {
+  background-color: rgba(159, 49, 243, 0.204);
+  transition: background 0.3s;
+}
+
+button.delete-btn {
+  background-color: #ff4c4c;
+  color: white;
+  transition: background 0.3s;
+  cursor: pointer;
+}
+
+button.delete-btn:hover {
+  background-color: #c01515;
+  box-shadow: 0 0 12px #fff, 0 0 20px #c370e0;
+  transform: scale(1.05);
+}
+
+button.edit-btn {
+  background-color: #4cb8ff;
+  color: white;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+button.edit-btn:hover {
+  background-color: #3399dd;
+  box-shadow: 0 0 12px #fff, 0 0 20px #c370e0;
+  transform: scale(1.05);
+}
+
+
+.typing-header {
+  width: fit-content;
+  margin: 30px auto;
+  overflow: hidden;
+  border-right: 2px solid #f7cfff;
+  white-space: nowrap;
+  animation: typing 4s steps(30) infinite, blink 0.75s step-end infinite;
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 55% }
+}
+
+@keyframes blink {
+  50% { border-color: transparent }
+}
+
+h1::before, h2::before {
+  content: "✏ ";
+  margin-right: 5px;
+}
